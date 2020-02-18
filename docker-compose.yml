@@ -1,0 +1,14 @@
+## Sample docker-compose file to run jellenberger/jupyter-base.
+
+version: '3'
+
+services:
+  jupyter:
+    image: jupyter/scipy-notebook
+    environment:
+      JUPYTER_ENABLE_LAB: 'yes'
+    volumes:
+      - ./work:/home/jovyan/work
+      - ./data:/home/jovyan/data
+    ports:
+      - 8888:8888
