@@ -4,7 +4,7 @@ version: '3'
 
 services:
   jupyter:
-    image: jupyter/scipy-notebook
+    build: .
     environment:
       JUPYTER_ENABLE_LAB: 'yes'
     volumes:
